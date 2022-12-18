@@ -6,7 +6,7 @@
 /*   By: marolive <marolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 19:45:11 by marolive          #+#    #+#             */
-/*   Updated: 2022/12/18 04:48:05 by marolive         ###   ########.fr       */
+/*   Updated: 2022/12/18 10:04:35 by marolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ void	valid_arg(int c, char **arg);
 void	p_error(void);
 void	swap(t_stack **stack, char *print);
 void	rotate(t_stack **stack, char *print);
+void	reverse_rotate(t_stack **stack, char *print);
 
 #endif

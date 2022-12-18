@@ -4,6 +4,7 @@ SRCS	= push_swap.c \
 			utils/print.c \
 			operations/rotate.c \
 			operations/swap.c \
+			operations/reverse_rotate.c \
 			validations.c
 
 

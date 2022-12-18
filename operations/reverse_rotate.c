@@ -6,29 +6,29 @@
 /*   By: marolive <marolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 05:01:33 by marolive          #+#    #+#             */
-/*   Updated: 2022/12/18 05:14:20 by marolive         ###   ########.fr       */
+/*   Updated: 2022/12/18 11:04:45 by marolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void reverse_rotate(t_stack **stack, char *print)
+void    reverse_rotate(t_stack **stack, char *print)
 {
     t_stack *last;
     t_stack *node;
-    t_stack *lst;
+    t_stack *header;
     
     last = *stack;
     node = *stack;
-    lst = *stack;
+    header = *stack;
     while(node->next != NULL)
     {
-        if (node->next == NULL)
-            lst = lst->next;
+        if (node->next->next == NULL)
+            last = node;
         node = node->next;
     }
     node->next = *stack;
-    lst->next = NULL;
+    last->next = NULL;
     *stack = node;
     ft_printf("%s", print);
 }
