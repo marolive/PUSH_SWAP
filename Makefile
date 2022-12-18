@@ -1,5 +1,11 @@
 NAME	= push_swap
-SRCS	= push_swap.c 
+SRCS	= push_swap.c \
+			operations/add_node.c \
+			utils/print.c \
+			operations/rotate.c \
+			operations/swap.c \
+			validations.c
+
 
 LIB_DIR = libft
 LIB		= $(LIB_DIR)/libft.a
@@ -10,10 +16,10 @@ CFLAGS	= -Wall -Werror -Wextra
 all: $(NAME)
 
 $(NAME): $(LIB)
-	$(CC) $(CFLAGS) $(SRCS) $(LIB) -o $(NAME) 
+	@$(CC) $(CFLAGS) $(SRCS) $(LIB) -o $(NAME) 
 
 $(LIB):
-	make -C $(LIB_DIR)
+	@make -C $(LIB_DIR)
 
 clean:
 	$(RM) $(NAME)
