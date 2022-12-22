@@ -12,8 +12,16 @@
 
 #include "../push_swap.h"
 
-void    push(t_stack **stack, char *print)
+void    push(t_stack **stack_a, t_stack **stack_b, char *print)
 {
-    
+    t_stack *temp_a;
+    t_stack *temp_s;
+
+    temp_a = *stack_a;
+    temp_s = (*stack_a)->next;
+    *stack_b = temp_a;
+    (*stack_a) = temp_s;
+    temp_a->next = NULL;
+    ft_printf("%s", print);
 }
 

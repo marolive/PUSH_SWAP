@@ -5,6 +5,8 @@ SRCS	= push_swap.c \
 			operations/rotate.c \
 			operations/swap.c \
 			operations/reverse_rotate.c \
+			operations/push.c \
+			operations/operation.c \
 			validations.c
 
 
@@ -12,7 +14,7 @@ LIB_DIR = libft
 LIB		= $(LIB_DIR)/libft.a
 CC		= cc
 RM		= rm -f
-CFLAGS	= -Wall -Werror -Wextra
+CFLAGS	= 
 
 all: $(NAME)
 

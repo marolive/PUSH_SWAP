@@ -6,7 +6,7 @@
 /*   By: marolive <marolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 19:56:44 by marolive          #+#    #+#             */
-/*   Updated: 2022/06/24 15:42:59 by marolive         ###   ########.fr       */
+/*   Updated: 2022/12/21 16:40:23 by marolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	while (s[i] != '\0')
 	{
-		if (i >= start & j < len)
+		if (i >= start && j < len)
 			a[j++] = s[i];
 		i++;
 	}
