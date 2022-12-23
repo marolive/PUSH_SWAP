@@ -6,7 +6,7 @@
 /*   By: marolive <marolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 08:48:45 by marolive          #+#    #+#             */
-/*   Updated: 2022/12/18 01:32:18 by marolive         ###   ########.fr       */
+/*   Updated: 2022/12/23 00:30:46 by marolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@ static int is_dig(char c)
         return (0);
 }
 
-static int verify_digit(const char str, long resul)
+static int verify_digit(const char str, long dest)
 {
 	if (!is_dig(str))
     {
-        resul = 2147483650;
-        return (1);
+        dest = 2147483650;
+        return (dest);
     }
-    return (0);
+    return (1);
 }
 
 long	ft_atoi(const char *str)
@@ -43,8 +43,9 @@ long	ft_atoi(const char *str)
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
-		if (str[i++] == '-')
+		if (str[i] == '-')
 			neg = -1;
+		i++;
 	}
 	while (str[i])
 	{
