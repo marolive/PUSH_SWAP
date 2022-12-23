@@ -9,7 +9,6 @@ SRCS	= push_swap.c \
 			utils/op_sorting.c \
 			validations.c
 
-
 LIB_DIR = libft
 LIB		= $(LIB_DIR)/libft.a
 CC		= cc
