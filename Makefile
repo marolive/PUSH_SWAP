@@ -1,12 +1,13 @@
 NAME	= push_swap
 SRCS	= push_swap.c \
 			operations/add_node.c \
-			utils/print.c \
-			operations/rotate.c \
-			operations/swap.c \
-			operations/reverse_rotate.c \
 			operations/push.c \
-			utils/op_sorting.c \
+			operations/swap.c \
+			operations/rotate.c \
+			operations/reverse_rotate.c \
+			utils/print.c \
+			utils/fr_sorting.c \
+			utils/sd_sorting.c \
 			validations.c
 
 LIB_DIR = libft

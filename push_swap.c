@@ -6,7 +6,7 @@
 /*   By: marolive <marolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 13:31:37 by marolive          #+#    #+#             */
-/*   Updated: 2022/12/23 09:49:41 by marolive         ###   ########.fr       */
+/*   Updated: 2022/12/23 19:43:25 by marolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,19 @@ int main(int argc, char **argv)
 		number = ft_atoi(argv[--c]);
 		add_node(&stack_a, number, 0);
 	}
+	print_stack(stack_a);
 	if(is_sorted(&stack_a))
 		exit (0);
-	three_sort(&stack_a);
+	if (argc == 3)
+		two_sort(&stack_a);
+	if (argc == 4)
+		three_sort(&stack_a);
+	if (argc == 5)
+		four_sort(&stack_a, &stack_b);
+	print_stack(stack_a);
+	if (argc == 6)
+		five_sort(&stack_a, &stack_b);
+	print_stack(stack_a);
 
 
 

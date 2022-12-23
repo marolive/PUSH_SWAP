@@ -6,7 +6,7 @@
 /*   By: marolive <marolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 19:45:11 by marolive          #+#    #+#             */
-/*   Updated: 2022/12/23 09:49:43 by marolive         ###   ########.fr       */
+/*   Updated: 2022/12/23 19:07:31 by marolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,10 @@ void	rotate(t_stack **stack, char *print);
 void	reverse_rotate(t_stack **stack, char *print);
 void    push(t_stack **stack_a, t_stack **stack_b, char *print);
 int		is_sorted(t_stack **list);
+void	two_sort(t_stack **stack);
 void    three_sort(t_stack **a);
+void	four_sort(t_stack **stack_a, t_stack **stack_b);
+void	five_sort(t_stack **stack_a, t_stack **stack_b);
 //void    sorting(t_stack **a, t_stack **b, int c);
 
 #endif
