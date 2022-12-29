@@ -8,13 +8,15 @@ SRCS	= push_swap.c \
 			utils/print.c \
 			utils/fr_sorting.c \
 			utils/sd_sorting.c \
+			utils/radix_sort.c \
+			utils/sorting.c \
 			validations.c
 
 LIB_DIR = libft
 LIB		= $(LIB_DIR)/libft.a
 CC		= cc
 RM		= rm -f
-CFLAGS	= -Wall -Werror -Wextra
+CFLAGS	= -Wall -Werror -Wextra -g
 
 all: $(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: marolive <marolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 18:15:56 by marolive          #+#    #+#             */
-/*   Updated: 2022/12/23 19:43:18 by marolive         ###   ########.fr       */
+/*   Updated: 2022/12/29 15:47:35 by marolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,23 @@ void	four_sort(t_stack **stack_a, t_stack **stack_b)
 void	five_sort(t_stack **stack_a, t_stack **stack_b)
 {
 	int		small;
+	t_stack *node;
 	
+	node = *stack_a;
 	small = verify_small(stack_a);
-	while ((*stack_a)->number != small)
+	if (node->next->next->next->next->number == small)
+	{		
 		reverse_rotate(stack_a, "rra\n");
-	push(stack_a, stack_b, "pb\n");
-	four_sort(stack_a, stack_b);
-	push(stack_b, stack_a, "pa\n");
-
+		push(stack_a, stack_b, "pb\n");
+		four_sort(stack_a, stack_b);
+		push(stack_b, stack_a, "pa\n");
+	}
+	else
+	{
+		while ((*stack_a)->number != small)
+			rotate(stack_a, "ra\n");
+		push(stack_a, stack_b, "pb\n");
+		four_sort(stack_a, stack_b);
+		push(stack_b, stack_a, "pa\n");
+	}
 }

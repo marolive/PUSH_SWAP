@@ -6,7 +6,7 @@
 /*   By: marolive <marolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 19:45:11 by marolive          #+#    #+#             */
-/*   Updated: 2022/12/23 19:07:31 by marolive         ###   ########.fr       */
+/*   Updated: 2022/12/29 14:24:57 by marolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,10 @@ typedef struct s_stack
 }	t_stack;
 
 void	add_node(t_stack **list, int data, int index);
-void	print_stack(t_stack *stack);
 void	valid_arg(int c, char **arg);
 void	p_error(void);
+int		verify_small(t_stack **stack);
+void	stack_index(t_stack **stack);
 void	swap(t_stack **stack, char *print);
 void	rotate(t_stack **stack, char *print);
 void	reverse_rotate(t_stack **stack, char *print);
@@ -35,6 +36,9 @@ void	two_sort(t_stack **stack);
 void    three_sort(t_stack **a);
 void	four_sort(t_stack **stack_a, t_stack **stack_b);
 void	five_sort(t_stack **stack_a, t_stack **stack_b);
-//void    sorting(t_stack **a, t_stack **b, int c);
+void	radix_sort(t_stack **stack_a, t_stack **stack_b);
+void    sorting(t_stack **stack_a, t_stack **stack_b, int c);
+
+void print_stack(t_stack *stack);
 
 #endif

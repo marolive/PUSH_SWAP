@@ -6,7 +6,7 @@
 /*   By: marolive <marolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 05:01:33 by marolive          #+#    #+#             */
-/*   Updated: 2022/12/18 11:04:45 by marolive         ###   ########.fr       */
+/*   Updated: 2022/12/29 10:38:26 by marolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,9 @@ void    reverse_rotate(t_stack **stack, char *print)
 {
     t_stack *last;
     t_stack *node;
-    t_stack *header;
     
     last = *stack;
     node = *stack;
-    header = *stack;
     while(node->next != NULL)
     {
         if (node->next->next == NULL)
