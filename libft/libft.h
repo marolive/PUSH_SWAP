@@ -6,7 +6,7 @@
 /*   By: marolive <marolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 12:53:42 by marolive          #+#    #+#             */
-/*   Updated: 2022/12/16 21:02:28 by marolive         ###   ########.fr       */
+/*   Updated: 2023/01/04 20:14:18 by marolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 
 # define INT_MAX 2147483647
 # define INT_MIN -2147483648
+# define OVERFLOW 2147483650
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);

@@ -6,6 +6,7 @@ SRCS	= push_swap.c \
 			operations/rotate.c \
 			operations/reverse_rotate.c \
 			utils/print.c \
+			utils/cleaner.c \
 			utils/fr_sorting.c \
 			utils/sd_sorting.c \
 			utils/radix_sort.c \
@@ -16,7 +17,7 @@ LIB_DIR = libft
 LIB		= $(LIB_DIR)/libft.a
 CC		= cc
 RM		= rm -f
-CFLAGS	= -Wall -Werror -Wextra -g
+CFLAGS	= -Wall -Werror -Wextra
 
 all: $(NAME)
 

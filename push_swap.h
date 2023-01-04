@@ -6,7 +6,7 @@
 /*   By: marolive <marolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 19:45:11 by marolive          #+#    #+#             */
-/*   Updated: 2022/12/29 14:24:57 by marolive         ###   ########.fr       */
+/*   Updated: 2023/01/04 20:27:47 by marolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void	five_sort(t_stack **stack_a, t_stack **stack_b);
 void	radix_sort(t_stack **stack_a, t_stack **stack_b);
 void    sorting(t_stack **stack_a, t_stack **stack_b, int c);
 
-void print_stack(t_stack *stack);
+void	print_stack(t_stack *stack);
+void	clear_stack(t_stack **stack);
 
 #endif
