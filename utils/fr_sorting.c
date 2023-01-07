@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   frist_sorting.c                                    :+:      :+:    :+:   */
+/*   fr_sorting.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marolive <marolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 04:13:21 by marolive          #+#    #+#             */
-/*   Updated: 2022/12/23 18:18:30 by marolive         ###   ########.fr       */
+/*   Updated: 2023/01/06 14:00:56 by marolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,11 @@ static void	doble_op(char s, t_stack **stack)
 		reverse_rotate(stack, "rra\n");
 	}
 }
-void    three_sort(t_stack **stack_a)
+
+void	three_sort(t_stack **stack_a)
 {
-	t_stack *head;
-	int 	first;
+	t_stack	*head;
+	int		first;
 	int		second;
 	int		thrid;
 
@@ -41,23 +42,20 @@ void    three_sort(t_stack **stack_a)
 	first = head->number;
 	second = head->next->number;
 	thrid = head->next->next->number;
+	if (first < second && first < thrid && second > thrid)
+		doble_op('s', stack_a);
+	if (second < first && second < thrid)
 	{
-		if (first < second && first < thrid && second > thrid)
-			doble_op('s', stack_a);
-		if (second < first && second < thrid)
-		{
-			if (first < thrid)
-				swap(stack_a, "sa\n");
-			else
-        		rotate(stack_a, "ra\n");
-		}
-		if (thrid < first && thrid < second)
-		{
-			if (first < second)
-        		reverse_rotate(stack_a, "rra\n");
-			else
-				doble_op('f', stack_a);
-		}
+		if (first < thrid)
+			swap(stack_a, "sa\n");
+		else
+			rotate(stack_a, "ra\n");
+	}
+	if (thrid < first && thrid < second)
+	{
+		if (first < second)
+			reverse_rotate(stack_a, "rra\n");
+		else
+			doble_op('f', stack_a);
 	}
 }
-

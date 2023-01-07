@@ -14,7 +14,7 @@
 
 void	add_node(t_stack **list, int data, int index)
 {
-	t_stack *node;
+	t_stack	*node;
 
 	node = (t_stack *)malloc(sizeof(t_stack));
 	if (!node)
@@ -27,9 +27,9 @@ void	add_node(t_stack **list, int data, int index)
 
 void	stack_index(t_stack **stack)
 {
-	int index;
-	t_stack *temp;
-	t_stack *list;
+	int		index;
+	t_stack	*temp;
+	t_stack	*list;
 
 	temp = *stack;
 	list = *stack;

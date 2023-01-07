@@ -12,12 +12,12 @@
 
 #include "../push_swap.h"
 
-void clear_stack(t_stack **stack)
+void	clear_stack(t_stack **stack)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 
 	tmp = *stack;
-	while(*stack != NULL)
+	while (*stack != NULL)
 	{
 		tmp = (*stack)->next;
 		free(*stack);

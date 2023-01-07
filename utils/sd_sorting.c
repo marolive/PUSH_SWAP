@@ -12,9 +12,9 @@
 
 #include "../push_swap.h"
 
-int		verify_small(t_stack **stack)
+int	verify_small(t_stack **stack)
 {
-	t_stack *head;
+	t_stack	*head;
 	int		small;
 
 	head = *stack;
@@ -32,21 +32,20 @@ int		verify_small(t_stack **stack)
 void	four_sort(t_stack **stack_a, t_stack **stack_b)
 {
 	int		small;
-	
+
 	small = verify_small(stack_a);
 	while ((*stack_a)->number != small)
 		reverse_rotate(stack_a, "rra\n");
 	push(stack_a, stack_b, "pb\n");
 	three_sort(stack_a);
 	push(stack_b, stack_a, "pa\n");
-
 }
 
 void	five_sort(t_stack **stack_a, t_stack **stack_b)
 {
 	int		small;
-	t_stack *node;
-	
+	t_stack	*node;
+
 	node = *stack_a;
 	small = verify_small(stack_a);
 	if (node->next->next->next->next->number == small)

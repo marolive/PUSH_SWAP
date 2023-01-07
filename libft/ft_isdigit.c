@@ -14,22 +14,22 @@
 
 int	ft_isdigit(char **arg)
 {
-    int    i;
-    int    j;
+	int	i;
+	int	j;
 
-    i = 1;
-    while (arg[i])
-    {
-        j = 0;
-        while (arg[i][j])
-        {
-            if ((arg[i][0] == '-' || arg[i][0] == '+') && j == 0)
-                j++;
-            if (!(arg[i][j] >= '0' && arg[i][j] <= '9'))
-                return (0);
-            j++;
-        }
-        i++;
-    }
-    return (1);
+	i = 1;
+	while (arg[i])
+	{
+		j = 0;
+		while (arg[i][j])
+		{
+			if ((arg[i][0] == '-' || arg[i][0] == '+') && j == 0)
+				j++;
+			if (!(arg[i][j] >= '0' && arg[i][j] <= '9'))
+				return (0);
+			j++;
+		}
+		i++;
+	}
+	return (1);
 }

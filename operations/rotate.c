@@ -12,19 +12,19 @@
 
 #include "../push_swap.h"
 
-void    rotate(t_stack **stack, char *print)
+void	rotate(t_stack **stack, char *print)
 {
-    t_stack *head;
-    t_stack *node;
-    t_stack *header;
-    
-    head = *stack;
-    node = *stack;
-    header = (*stack)->next;
-    while(node->next != NULL)
-        node = node->next;
-    (*stack) = header;
-    node->next = head;
-    head->next = NULL;
-    ft_printf("%s", print);
+	t_stack	*head;
+	t_stack	*node;
+	t_stack	*header;
+
+	head = *stack;
+	node = *stack;
+	header = (*stack)->next;
+	while (node->next != NULL)
+		node = node->next;
+	(*stack) = header;
+	node->next = head;
+	head->next = NULL;
+	ft_printf("%s", print);
 }

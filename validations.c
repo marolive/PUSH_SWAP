@@ -12,13 +12,13 @@
 
 #include "push_swap.h"
 
-int is_repeated(char **arg)
+int	is_repeated(char **arg)
 {
-	int i;
-	int j;
-	int flag1;
-	int flag2;
-	
+	int	i;
+	int	j;
+	int	flag1;
+	int	flag2;
+
 	i = 1;
 	flag1 = 0;
 	while (arg[i])
@@ -38,26 +38,26 @@ int is_repeated(char **arg)
 		}
 		i++;
 	}
-   	return (0);
+	return (0);
 }
 
-int is_sorted(t_stack **list)
+int	is_sorted(t_stack **list)
 {
-	t_stack *head;
-	
+	t_stack	*head;
+
 	head = *list;
 	while (head->next != NULL)
 	{
-		if(head->number > head->next->number)
+		if (head->number > head->next->number)
 			return (0);
 		head = head->next;
 	}
 	return (1);
 }
 
-void valid_arg(int c, char **arg)
+void	valid_arg(int c, char **arg)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	if (c > 2)

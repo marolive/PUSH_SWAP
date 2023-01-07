@@ -12,15 +12,15 @@
 
 #include "../push_swap.h"
 
-void    push(t_stack **stack_a, t_stack **stack_b, char *print)
+void	push(t_stack **stack_a, t_stack **stack_b, char *print)
 {
-    t_stack *temp_a;
-    t_stack *temp_b;
+	t_stack	*temp_a;
+	t_stack	*temp_b;
 
-    temp_a = *stack_a;
-    temp_b = *stack_b;
-    *stack_a = (*stack_a)->next;
-    temp_a->next = temp_b;
-    *stack_b = temp_a; 
-    ft_printf("%s", print);
+	temp_a = *stack_a;
+	temp_b = *stack_b;
+	*stack_a = (*stack_a)->next;
+	temp_a->next = temp_b;
+	*stack_b = temp_a;
+	ft_printf("%s", print);
 }

@@ -6,7 +6,7 @@
 /*   By: marolive <marolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 12:53:42 by marolive          #+#    #+#             */
-/*   Updated: 2023/01/04 20:14:18 by marolive         ###   ########.fr       */
+/*   Updated: 2023/01/06 23:07:53 by marolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-long    ft_atoi(const char *str);
+long	ft_atoi(const char *str);
 char	*ft_itoa(int n);
 void	*ft_calloc(size_t count, size_t size);
 
@@ -64,6 +64,6 @@ int		ft_pointer(unsigned long n, char c);
 int		ft_put_hexa(unsigned int n, char c);
 int		ft_putnbr_u(unsigned int n);
 
-void    print_error(char *s);
+void	print_error(void);
 
 #endif
