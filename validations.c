@@ -6,7 +6,7 @@
 /*   By: marolive <marolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 02:42:18 by marolive          #+#    #+#             */
-/*   Updated: 2022/12/29 19:14:09 by marolive         ###   ########.fr       */
+/*   Updated: 2023/01/14 16:47:35 by marolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void	valid_arg(int c, char **arg)
 	int	i;
 
 	i = 1;
-	if (c > 2)
+	if (c > 1)
 	{
 		while (arg[i])
 		{
